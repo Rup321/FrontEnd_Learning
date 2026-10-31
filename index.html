@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Details</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="#about" class="navbar">About Us</a>
+            <a href="#projects" class="navbar">Projects</a>
+            <a href="#contacts" class="navbar">Contact Me</a>
+
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h1>Rupali Pawar</h1>
+            <p>i have arount <strong>1 year</strong> of experience in the backend development using <em>node js ,express
+                    and javascript</em></p>
+            <h2>Skills</h2>
+            <ul>
+                <li>Node js</li>
+                <li> Express</li>
+                <li>javascript</li>
+                <li>Postgres</li>
+                <li>Mysql</li>
+            </ul>
+
+            <h2>Links </h2>
+            <div class="links">
+                <a href="https://github.com/Rup321" target="_blank" rel="noopener noreferrer">Github</a>
+                <a href="https://www.linkedin.com/in/rupali-pawar-b38a25266/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a>
+
+            </div>
+
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Stack</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Node Projects</td>
+                        <td>Node js </td>
+                        <td>
+                            <a href="/githubLink1">Link1</a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>Expense Tracker</td>
+                        <td>Postgres </td>
+                        <td>
+                            <a href="/githubLink2">Link2</a>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="http://127.0.0.1:5500/index.html" method="Post">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter name" required>
+
+                <br> <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter email" required>
+                <br>
+                <div class="gender">
+                    <label for="">Gender:-</label>
+                    <label for="gender">Female</label>
+                    <input type="radio" name="gender" id="Female" value="Female">
+                    <label for="gender">Male</label>
+                    <input type="radio" name="gender" id="male" value="Male">
+                </div>
+
+                <section id="Skills">
+                    <label for="">Skills:-</label>
+                    <input type="checkbox" id="node" name="Skills" value="Node js">
+                    <label for="node">Node js</label>
+                    <input type="checkbox" id="express" name="Skills" value="Express">
+                    <label for="express">Express</label>
+                    <input type="checkbox" name="Skills" id="javascript" value="Javascript">
+                    <label for="javascript">Javascript</label>
+                </section>
+                <div>
+                    <label for="city" id="city">City</label>
+                    <select name="city">
+                        <option value=""></option>
+                        <option value="sangli">Sangli</option>
+                        <option value="Pune">Pune</option>
+                    </select>
+                </div>
+                <br>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" width="200px" height="200px">  </textarea>
+                <br>
+                <button type="submit" id="submit_button">Submit</button>
+            </form>
+
+        </section>
+
+    </main>
+
+    <section id="featured">
+        <div id="cards">
+            <div class="card">
+                <h2>Expense tracker</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dolorem!</p>
+                <a href="#" id="">Viwe Project</a>
+            </div>
+            <div class="card">
+                <h2>Node Project</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dolorem!</p>
+                <a href="#" id="">Viwe Project</a>
+            </div>
+            <div class="card">
+                <h2>Bus Advertisement</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dolorem!</p>
+                <a href="#" id="">Viwe Project</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        &copy 2026
+    </footer>
+</body>
+
+</html>
