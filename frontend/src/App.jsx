@@ -1,16 +1,40 @@
-const { useState } = require("react");
+import React, { useEffect, useState } from 'react'
+import User from './Component/User'
 
-function App(){
-   let [count ,setCount] =useState(0)
-   let name ="Rupali"
+function App() {
+  let greet = "Hello"
+  let [count, setCount] = useState(0)
+  let [name, setName] = useState("Rupali")
+  let [show, setShow] = useState(true)
+
+  useEffect(() => {
+    console.log("Name changed")
+  }, [name])
+  useEffect(() => {
+    console.log("Count changed")
+  }, [count]);
+
+ 
   return (
-   
-<div style={{padding:"20px" , width:"100px" ,backgroundColor:"marron" }}>
-<h1>Hello {name}</h1>
-<p>you clicked the button {count}</p>
-<button onClick={()=>setCount(count+1)}></button>
+    <div>
+      <h1>{greet}</h1>
+      <h1>{name}</h1>
+      <h1>{count}</h1>
+      <h1>{count % 2 == 0 ? `Count is Even` : `Count is Odd`}</h1>
 
-</div>
+      <button onClick={() => { setCount(count => count + 1) }}>
+        Increment
 
-)
+      </button>
+      <button onClick={() => { setName("Sanika") }} style={{ margin: "10px" }}>Decrement</button>
+      <button onClick={() => setShow(!show)}>UserMount</button>
+
+      <User name="Rupali Pawar" age="23"></User>
+      <User name="Vishal Pawar" age="20"></User>
+
+      {show && <User name="Simran" age={22} />}
+    </div>
+  )
 }
+
+export default App
