@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 
-function FetchUsers(planId) {
-    let [users, setUsers] = useState(null);
+function FetchUsers() {
+    let [users, setUsers] = useState([]);
     let [loading, setLoading] = useState(true)
     let [err, setError] = useState(null)
 
     useEffect(() => {
         async function fetchUsers() {
             try {
-                let response = await fetch(`https://gorest.co.in{planId}
+                let response = await fetch(`https://gorest.co.in
 
 `)
                 let data = await response.json();
@@ -24,22 +24,22 @@ function FetchUsers(planId) {
             }
         }
         fetchUsers()
-    }, [planId])
+    }, [])
 
-    // if (loading) {
-    //     return <h1>Loading</h1>
-    // }
-    // if (err) {
-    //     return <h1>err :{err}</h1>
-    // }
+    if (loading) {
+        return <h1>Loading</h1>
+    }
+    if (err) {
+        return <h1>err :{err}</h1>
+    }
 
     return (
         <div>
 
-            {/* {users.map((user) => {
+            {users.map((user) => {
                 return <h1>Name :{user.name} , email:{user.email} <br /></h1>
-            })} */}
-            {users ? <h1> user details :{users.name}</h1> : <h1>Loading</h1>}
+            })}
+            {/* {users ? <h1> user details :{users.name}</h1> : <h1>Loading</h1>} */}
 
 
         </div>
